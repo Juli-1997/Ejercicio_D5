@@ -1,0 +1,31 @@
+clima = ['Soleado', 'Lluvioso']
+todaropa = ['1', '2']      # 1=Camisa, 2=Chaqueta<< Puse esto para que no tenga que escribir tanto
+accesorio = ['3', '4']     # 3=Gorra, 4=Sombrilla<<
+
+ROPA = input("Cómo está el clima el día de hoy? (Escribe Soleado o Lluvioso):\n")
+
+if ROPA not in clima:
+    print("\n--- Resultado ---")
+    print("Error: Clima no reconocido. Recuerda escribir 'Soleado' o 'Lluvioso'.")
+
+elif ROPA == clima[0]:
+    ahora = input("Elije la ropa que quieras usar:\n 1.Camisa\n 2.Chaqueta\n 3.Gorra\n 4.Sombrilla\nSelección: \n (Ponga solo el número de la opción)\n")
+    print("\n--- Resultado ---")
+    
+    if ahora in todaropa[0] or ahora in accesorio[0]:
+        print("Buena elección para el sol ")
+    elif ahora in todaropa[1] or ahora in accesorio[1]: 
+        print("Te dará mucho calor con eso en un día soleado. ")
+    else:
+        print("Opción de ropa no recomendada")
+
+elif ROPA == clima[1].strip(): 
+    ahora = input("Elije la ropa que quieras usar:\n 1.Camisa\n 2.Chaqueta\n 3.Gorra\n 4.Sombrilla\nSelección: \n (Ponga solo el número de la opción)\n")
+    print("\n--- Resultado ---")
+    
+    if ahora in todaropa[1] or ahora in accesorio[1]: 
+        print("Buena elección para la lluvia. ")
+    elif ahora in todaropa[0] or ahora in accesorio[0]:
+         print("Te vas a mojar o tendrás frío con esa selección.")
+    else:
+        print("Opción de ropa no recomendada")
